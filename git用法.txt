@@ -1,0 +1,30 @@
+1,先在github上加一个pool,默认会有origin的池存在
+
+2，在本地安装git,打开git，建立一个目录
+
+3,配置全局变量：
+
+git config --global user.name "你的名字"
+Email
+然后是你的Email，同样，这个Email也会出现在你的提交记录中，请尽量保持此Email和您的Git@OSC的注册Email一致。
+
+git config --global user.email "你的Email"
+
+4，把github上的代码下载下来
+git clone https://github/lengyuyan/mydoc.git
+
+5，查询这个rep有几个池：
+   git remote
+   需要的话还可以建另外的池：git remote add origin2 https://github.com/lengyuyan/mydoc.git
+   也可以删除池：git remote rm origin2   这只是删除本地的远程仓库 git上的没动
+  
+  6,提交文件：
+  先 把本地文件加到池中：git add 1.txt   也可以git .  把 所有文件加到池中
+  写提交注释： git commit -m 'first commit'
+  提交这个刚刚加到池origin中的文件到master目录： git push origin master
+
+  如果本地的远程仓库有问题：则可以git push origin master 来下载github上的仓库来修复
+
+
+  更多关于分支之类的参考http://www.cnblogs.com/wenjiang/p/3161682.html
+
